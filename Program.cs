@@ -16,7 +16,7 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FuelCalc());
         }
     }
 }
