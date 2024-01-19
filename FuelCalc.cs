@@ -19,10 +19,10 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             InitializeComponent();
 
             topPanel.Dock = DockStyle.Top;
-            topPanel.Height = (int)(Size.Height -20) / 2;
+            topPanel.Height = (int)(Size.Height) / 2 + 20;
 
             bottomPanel.Dock = DockStyle.Bottom;
-            bottomPanel.Height = (int)(Size.Height - 20) / 6;
+            bottomPanel.Height = (int)(Size.Height) / 6;
 
             InitializeCustomComponent();
         }
@@ -72,6 +72,11 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
         }
 
         private void consumeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
         {
 
         }

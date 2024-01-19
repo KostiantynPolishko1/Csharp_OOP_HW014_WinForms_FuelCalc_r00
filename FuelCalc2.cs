@@ -25,9 +25,23 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             setLabelFontSize(10, distanceLabel, consumeLabel, priceLabel, resultcalc_infoLabel);
             setLabelFontSize(14, resultcalcLabel);
 
-            consumeLabel.Location = new Point((int)(Size.Width - consumeLabel.Width) / 2, consumeLabel.Location.Y);
-            distanceLabel.Location = new Point(consumeLabel.Location.X - distanceLabel.Width - 15, distanceLabel.Location.Y);
-            priceLabel.Location = new Point(consumeLabel.Location.X + consumeLabel.Width + 15, distanceLabel.Location.Y);
+            //set position of labels
+            int space = 15;
+            consumeLabel.Location = new Point((int)(Size.Width - consumeLabel.Width) / 2, space);
+            distanceLabel.Location = new Point(consumeLabel.Location.X - distanceLabel.Width - 15, space);
+            priceLabel.Location = new Point(consumeLabel.Location.X + consumeLabel.Width + 15, space);
+
+            //set position of textbox
+            int space2 = 10;
+            distanceTB.Location = new Point(distanceLabel.Location.X + (distanceLabel.Width - distanceTB.Width)/2, distanceLabel.Location.Y + distanceTB.Height + space2);
+            consumeTB.Location = new Point(consumeLabel.Location.X + (consumeLabel.Width - consumeTB.Width)/2, consumeLabel.Location.Y + consumeTB.Height + space2);
+            priceTB.Location = new Point(priceLabel.Location.X + (priceLabel.Width - priceTB.Width)/2, priceLabel.Location.Y + priceTB.Height + space2);
+
+            //set position of button
+            int space3 = 0;
+            calcBtn.Location = new Point(distanceLabel.Location.X + (distanceLabel.Width - calcBtn.Width) / 2, distanceTB.Location.Y + calcBtn.Height + space3);
+            clearBtn.Location = new Point(consumeLabel.Location.X + (consumeLabel.Width - clearBtn.Width) / 2, consumeTB.Location.Y + clearBtn.Height + space3);
+            saveBtn.Location = new Point(priceLabel.Location.X + (priceLabel.Width - saveBtn.Width) / 2, priceTB.Location.Y + saveBtn.Height + space3);
         }
 
         private void setLabelFontBold(params Label[] label)
