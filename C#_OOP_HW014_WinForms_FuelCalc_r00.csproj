@@ -52,6 +52,9 @@
     <Compile Include="FuelCalc.Designer.cs">
       <DependentUpon>FuelCalc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FuelCalc2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FuelCalc.resx">

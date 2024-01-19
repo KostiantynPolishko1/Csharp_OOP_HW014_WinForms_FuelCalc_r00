@@ -23,6 +23,8 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
 
             bottomPanel.Dock = DockStyle.Bottom;
             bottomPanel.Height = (int)(Size.Height - 20) / 6;
+
+            InitializeCustomComponent();
         }
 
         private void FuelCalc_Load(object sender, EventArgs e)
@@ -33,15 +35,6 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
         private void closeLabel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        private void closeLabel_MouseHover(object sender, EventArgs e)
-        {
-            closeLabel.ForeColor = Color.DarkRed;
-        }
-
-        private void closeLabel_MouseLeave(object sender, EventArgs e)
-        {
-            closeLabel.ForeColor = Color.White;
         }
 
         private void FuelCalc_MouseMove(object sender, MouseEventArgs e)
@@ -61,6 +54,26 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
         private void FuelCalc_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape) { this.Close(); }
+        }
+
+        private void closeLabel_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void closeLabel_MouseLeave(object sender, EventArgs e)
+        {
+            closeLabel.ForeColor = Color.White;
+        }
+
+        private void closeLabel_MouseHover(object sender, EventArgs e)
+        {
+            closeLabel.ForeColor = Color.DarkRed;
+        }
+
+        private void consumeLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
