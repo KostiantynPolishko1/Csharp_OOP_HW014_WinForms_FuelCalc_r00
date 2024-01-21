@@ -38,19 +38,19 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
         private void InitializeComponent()
         {
             this.topPanel = new System.Windows.Forms.Panel();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.priceTB = new System.Windows.Forms.TextBox();
+            this.consumeTB = new System.Windows.Forms.TextBox();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.calcBtn = new System.Windows.Forms.Button();
+            this.distanceTB = new System.Windows.Forms.TextBox();
+            this.closeLabel = new System.Windows.Forms.Label();
             this.priceLabel = new System.Windows.Forms.Label();
             this.consumeLabel = new System.Windows.Forms.Label();
             this.distanceLabel = new System.Windows.Forms.Label();
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.resultcalc_infoLabel = new System.Windows.Forms.Label();
             this.resultcalcLabel = new System.Windows.Forms.Label();
-            this.closeLabel = new System.Windows.Forms.Label();
-            this.distanceTB = new System.Windows.Forms.TextBox();
-            this.consumeTB = new System.Windows.Forms.TextBox();
-            this.priceTB = new System.Windows.Forms.TextBox();
-            this.calcBtn = new System.Windows.Forms.Button();
-            this.clearBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.bottomPanel.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,96 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             this.topPanel.Size = new System.Drawing.Size(801, 173);
             this.topPanel.TabIndex = 0;
             // 
+            // saveBtn
+            // 
+            this.saveBtn.AutoSize = true;
+            this.saveBtn.BackColor = System.Drawing.Color.Green;
+            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.saveBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(598, 123);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(128, 40);
+            this.saveBtn.TabIndex = 10;
+            this.saveBtn.Text = "СОХРАНИТЬ";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            // 
+            // priceTB
+            // 
+            this.priceTB.Location = new System.Drawing.Point(598, 84);
+            this.priceTB.Name = "priceTB";
+            this.priceTB.Size = new System.Drawing.Size(124, 22);
+            this.priceTB.TabIndex = 7;
+            this.priceTB.Leave += new System.EventHandler(this.priceTB_Leave);
+            // 
+            // consumeTB
+            // 
+            this.consumeTB.Location = new System.Drawing.Point(271, 84);
+            this.consumeTB.Name = "consumeTB";
+            this.consumeTB.Size = new System.Drawing.Size(124, 22);
+            this.consumeTB.TabIndex = 6;
+            this.consumeTB.Leave += new System.EventHandler(this.consumeTB_Leave);
+            // 
+            // clearBtn
+            // 
+            this.clearBtn.AutoSize = true;
+            this.clearBtn.BackColor = System.Drawing.Color.Blue;
+            this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.clearBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clearBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBtn.Location = new System.Drawing.Point(271, 123);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(128, 40);
+            this.clearBtn.TabIndex = 9;
+            this.clearBtn.Text = "ОЧИСТИТЬ";
+            this.clearBtn.UseVisualStyleBackColor = false;
+            // 
+            // calcBtn
+            // 
+            this.calcBtn.AutoSize = true;
+            this.calcBtn.BackColor = System.Drawing.Color.Black;
+            this.calcBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calcBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.calcBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.calcBtn.ForeColor = System.Drawing.Color.White;
+            this.calcBtn.Location = new System.Drawing.Point(31, 123);
+            this.calcBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.calcBtn.Name = "calcBtn";
+            this.calcBtn.Size = new System.Drawing.Size(128, 40);
+            this.calcBtn.TabIndex = 8;
+            this.calcBtn.Text = "РАССЧИТАТЬ";
+            this.calcBtn.UseVisualStyleBackColor = false;
+            // 
+            // distanceTB
+            // 
+            this.distanceTB.Location = new System.Drawing.Point(31, 84);
+            this.distanceTB.Name = "distanceTB";
+            this.distanceTB.Size = new System.Drawing.Size(124, 22);
+            this.distanceTB.TabIndex = 5;
+            this.distanceTB.Leave += new System.EventHandler(this.distanceTB_Leave);
+            // 
+            // closeLabel
+            // 
+            this.closeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeLabel.BackColor = System.Drawing.Color.Red;
+            this.closeLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeLabel.ForeColor = System.Drawing.Color.White;
+            this.closeLabel.Location = new System.Drawing.Point(766, 0);
+            this.closeLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.closeLabel.Name = "closeLabel";
+            this.closeLabel.Size = new System.Drawing.Size(35, 35);
+            this.closeLabel.TabIndex = 4;
+            this.closeLabel.Text = "X";
+            this.closeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.closeLabel.Click += new System.EventHandler(this.closeLabel_Click_1);
+            this.closeLabel.MouseLeave += new System.EventHandler(this.closeLabel_MouseLeave);
+            this.closeLabel.MouseHover += new System.EventHandler(this.closeLabel_MouseHover);
+            // 
             // priceLabel
             // 
             this.priceLabel.AutoSize = true;
@@ -94,7 +184,6 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             this.consumeLabel.TabIndex = 2;
             this.consumeLabel.Text = "Расход толива на 100 км";
             this.consumeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.consumeLabel.Click += new System.EventHandler(this.consumeLabel_Click);
             // 
             // distanceLabel
             // 
@@ -137,94 +226,6 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             this.resultcalcLabel.TabIndex = 2;
             this.resultcalcLabel.Text = "Результаты расчёта";
             this.resultcalcLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // closeLabel
-            // 
-            this.closeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeLabel.BackColor = System.Drawing.Color.Red;
-            this.closeLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.closeLabel.ForeColor = System.Drawing.Color.White;
-            this.closeLabel.Location = new System.Drawing.Point(766, 0);
-            this.closeLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.closeLabel.Name = "closeLabel";
-            this.closeLabel.Size = new System.Drawing.Size(35, 35);
-            this.closeLabel.TabIndex = 4;
-            this.closeLabel.Text = "X";
-            this.closeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.closeLabel.Click += new System.EventHandler(this.closeLabel_Click_1);
-            this.closeLabel.MouseLeave += new System.EventHandler(this.closeLabel_MouseLeave);
-            this.closeLabel.MouseHover += new System.EventHandler(this.closeLabel_MouseHover);
-            // 
-            // distanceTB
-            // 
-            this.distanceTB.Location = new System.Drawing.Point(31, 84);
-            this.distanceTB.Name = "distanceTB";
-            this.distanceTB.Size = new System.Drawing.Size(124, 22);
-            this.distanceTB.TabIndex = 5;
-            // 
-            // consumeTB
-            // 
-            this.consumeTB.Location = new System.Drawing.Point(271, 84);
-            this.consumeTB.Name = "consumeTB";
-            this.consumeTB.Size = new System.Drawing.Size(124, 22);
-            this.consumeTB.TabIndex = 6;
-            // 
-            // priceTB
-            // 
-            this.priceTB.Location = new System.Drawing.Point(598, 84);
-            this.priceTB.Name = "priceTB";
-            this.priceTB.Size = new System.Drawing.Size(124, 22);
-            this.priceTB.TabIndex = 7;
-            // 
-            // calcBtn
-            // 
-            this.calcBtn.AutoSize = true;
-            this.calcBtn.BackColor = System.Drawing.Color.Black;
-            this.calcBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calcBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.calcBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.calcBtn.ForeColor = System.Drawing.Color.White;
-            this.calcBtn.Location = new System.Drawing.Point(31, 123);
-            this.calcBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.calcBtn.Name = "calcBtn";
-            this.calcBtn.Size = new System.Drawing.Size(128, 40);
-            this.calcBtn.TabIndex = 8;
-            this.calcBtn.Text = "РАССЧИТАТЬ";
-            this.calcBtn.UseVisualStyleBackColor = false;
-            // 
-            // clearBtn
-            // 
-            this.clearBtn.AutoSize = true;
-            this.clearBtn.BackColor = System.Drawing.Color.Blue;
-            this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.clearBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clearBtn.ForeColor = System.Drawing.Color.White;
-            this.clearBtn.Location = new System.Drawing.Point(271, 123);
-            this.clearBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(128, 40);
-            this.clearBtn.TabIndex = 9;
-            this.clearBtn.Text = "ОЧИСТИТЬ";
-            this.clearBtn.UseVisualStyleBackColor = false;
-            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.AutoSize = true;
-            this.saveBtn.BackColor = System.Drawing.Color.Green;
-            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.saveBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(598, 123);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(128, 40);
-            this.saveBtn.TabIndex = 10;
-            this.saveBtn.Text = "СОХРАНИТЬ";
-            this.saveBtn.UseVisualStyleBackColor = false;
             // 
             // FuelCalc
             // 

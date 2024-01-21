@@ -14,6 +14,7 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
     public partial class FuelCalc : Form
     {
         private Point lastMousePosition;
+        private FuelCost FuelCostObject;
         public FuelCalc()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             bottomPanel.Height = (int)(Size.Height) / 6;
 
             InitializeCustomComponent();
+            FuelCostObject = new FuelCost();
         }
 
         private void FuelCalc_Load(object sender, EventArgs e)
@@ -71,14 +73,28 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             closeLabel.ForeColor = Color.DarkRed;
         }
 
-        private void consumeLabel_Click(object sender, EventArgs e)
+        private void distanceTB_Leave(object sender, EventArgs e)
         {
-
+            float TargetValue = 0.0f;
+            if (distanceTB.Text != "" ) { TreatInPutData(FuelCost.IsValue(distanceTB.Text), ref TargetValue, ref distanceTB, 0); }
+            
+            if (TargetValue != 0) { FuelCostObject.Distance = TargetValue; }
         }
 
-        private void clearBtn_Click(object sender, EventArgs e)
+        private void consumeTB_Leave(object sender, EventArgs e)
         {
+            float TargetValue = 0.0f;
+            if (consumeTB.Text != "") { TreatInPutData(FuelCost.IsValue(consumeTB.Text), ref TargetValue, ref consumeTB, 1); }
+            
+            if (TargetValue != 0) { FuelCostObject.Consumption = TargetValue; }
+        }
 
+        private void priceTB_Leave(object sender, EventArgs e)
+        {
+            float TargetValue = 0.0f;
+            if (priceTB.Text != "") { TreatInPutData(FuelCost.IsValue(priceTB.Text), ref TargetValue, ref priceTB, 1); }
+
+            if (TargetValue != 0) { FuelCostObject.Price = TargetValue; }
         }
     }
 }

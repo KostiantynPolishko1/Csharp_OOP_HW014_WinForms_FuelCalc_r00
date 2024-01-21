@@ -67,5 +67,15 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
                 label[i].Font = new Font(label[i].Font.Name, size, label[i].Font.Style);
             }
         }
+
+        private void TreatInPutData((bool flag, float treatValue) tuple, ref float TargetValue, ref TextBox fieldTB, int i)
+        {
+            if (!tuple.flag) { MessageBox.Show($"{FuelCost.Message[i]} is in uncorrect format"); }
+            else
+            {
+                TargetValue = tuple.treatValue;
+                fieldTB.Text = tuple.treatValue.ToString();
+            }
+        }
     }
 }
