@@ -15,10 +15,7 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
     {
         private void InitializeCustomComponent()
         {
-            resultcalc_infoLabel.Text = 
-                $"На поездку потребуется {216.00} л топлива. " +
-                $"Она обойдётся в {11880.00} грн.";
-
+            resultcalc_infoLabel.Visible = false;
             setLabelFontBold(distanceLabel, consumeLabel, priceLabel, resultcalcLabel, resultcalc_infoLabel);
             setLabelFontName(distanceLabel, consumeLabel, priceLabel, resultcalcLabel, resultcalc_infoLabel);
 
@@ -76,6 +73,21 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
                 TargetValue = tuple.treatValue;
                 fieldTB.Text = tuple.treatValue.ToString();
             }
+        }
+
+        private void ClearTextBox(ref TextBox fieldTB)
+        {
+            fieldTB.Clear();
+        }
+
+        private void ShowLabel(ref Label fieldLabel)
+        {
+            fieldLabel.Visible = true;
+        }
+
+        private void HideLabel(ref Label fieldLabel)
+        {
+            fieldLabel.Visible = false;
         }
     }
 }

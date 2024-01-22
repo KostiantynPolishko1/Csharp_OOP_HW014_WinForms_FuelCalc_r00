@@ -96,5 +96,37 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
 
             if (TargetValue != 0) { FuelCostObject.Price = TargetValue; }
         }
+
+        private void calcBtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            bool flag = false;
+
+            if (distanceTB.Text == "" || consumeTB.Text == "" || priceTB.Text == "")                
+            { 
+                MessageBox.Show("Input data in empty fields");
+                flag = true;
+            }
+
+            if (!flag)
+            {
+                FuelCostObject.FuelCalculation();
+                FuelCostObject.CostCalculation();
+
+                ShowLabel(ref resultcalc_infoLabel);
+
+                resultcalc_infoLabel.Text =
+                    $"На поездку потребуется {FuelCost.GetTxtHundreths(FuelCostObject.TotalFuelVolume)} л топлива. " +
+                    $"Она обойдётся в {(int)FuelCostObject.TotalCost} грн {FuelCost.GetIntHundredths(FuelCostObject.TotalCost)} копеек.";
+            }
+        }
+
+        private void clearBtn_MouseDown(object sender, MouseEventArgs e)
+        {
+            ClearTextBox(ref distanceTB);
+            ClearTextBox(ref consumeTB);
+            ClearTextBox(ref priceTB);
+
+            HideLabel(ref resultcalc_infoLabel);
+        }
     }
 }

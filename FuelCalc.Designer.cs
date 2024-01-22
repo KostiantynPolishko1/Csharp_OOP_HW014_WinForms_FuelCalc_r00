@@ -68,7 +68,7 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             this.topPanel.Controls.Add(this.priceLabel);
             this.topPanel.Controls.Add(this.consumeLabel);
             this.topPanel.Controls.Add(this.distanceLabel);
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Location = new System.Drawing.Point(0, 1);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(801, 173);
             this.topPanel.TabIndex = 0;
@@ -120,6 +120,7 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             this.clearBtn.TabIndex = 9;
             this.clearBtn.Text = "ОЧИСТИТЬ";
             this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clearBtn_MouseDown);
             // 
             // calcBtn
             // 
@@ -136,6 +137,7 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             this.calcBtn.TabIndex = 8;
             this.calcBtn.Text = "РАССЧИТАТЬ";
             this.calcBtn.UseVisualStyleBackColor = false;
+            this.calcBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.calcBtn_MouseDown);
             // 
             // distanceTB
             // 
@@ -200,7 +202,7 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             // 
             this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(136)))));
             this.bottomPanel.Controls.Add(this.resultcalc_infoLabel);
-            this.bottomPanel.Location = new System.Drawing.Point(0, 212);
+            this.bottomPanel.Location = new System.Drawing.Point(0, 213);
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(801, 53);
             this.bottomPanel.TabIndex = 1;
@@ -208,18 +210,18 @@ namespace C__OOP_HW014_WinForms_FuelCalc_r00
             // resultcalc_infoLabel
             // 
             this.resultcalc_infoLabel.AutoSize = true;
-            this.resultcalc_infoLabel.Location = new System.Drawing.Point(12, 16);
+            this.resultcalc_infoLabel.Location = new System.Drawing.Point(28, 16);
             this.resultcalc_infoLabel.Margin = new System.Windows.Forms.Padding(0);
             this.resultcalc_infoLabel.Name = "resultcalc_infoLabel";
-            this.resultcalc_infoLabel.Size = new System.Drawing.Size(37, 16);
+            this.resultcalc_infoLabel.Size = new System.Drawing.Size(126, 16);
             this.resultcalc_infoLabel.TabIndex = 0;
-            this.resultcalc_infoLabel.Text = "label";
+            this.resultcalc_infoLabel.Text = "resultcalc_infoLabel";
             this.resultcalc_infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // resultcalcLabel
             // 
             this.resultcalcLabel.AutoSize = true;
-            this.resultcalcLabel.Location = new System.Drawing.Point(12, 184);
+            this.resultcalcLabel.Location = new System.Drawing.Point(12, 185);
             this.resultcalcLabel.Margin = new System.Windows.Forms.Padding(0);
             this.resultcalcLabel.Name = "resultcalcLabel";
             this.resultcalcLabel.Size = new System.Drawing.Size(143, 16);
