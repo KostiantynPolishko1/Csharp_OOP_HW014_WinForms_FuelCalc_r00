@@ -46,19 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FuelCalc.cs">
+    <Compile Include="WinFormFuelCalc\FuelCalc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FuelCalc.Designer.cs">
+    <Compile Include="WinFormFuelCalc\FuelCalc.Designer.cs">
       <DependentUpon>FuelCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FuelCalc2.cs">
+    <Compile Include="WinFormFuelCalc\FuelCalc2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FuelCost.cs" />
+    <Compile Include="WinFormFuelCalc\FuelCost.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FuelCalc.resx">
+    <EmbeddedResource Include="WinFormFuelCalc\FuelCalc.resx">
       <DependentUpon>FuelCalc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -81,7 +81,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="WinFormFuelCalc\App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
